@@ -1,0 +1,24 @@
+---
+sections:
+- title: "What is WMBR Cares?"
+  content: WMBR Cares (Community, Activism, Resources, and Engagement) is an initiative to increase awareness among WMBR listeners and station members of the local community we serve. We build relationships with local organizations and produce content, including interviews and public service announcements, for and about them. This content is aired on programs such as the Friday Nightly News and shared digitally with WMBR and the Greater Boston community.
+- title: "How can I get involved?"
+  content: If you are a WMBR station member join our [mailing list](https://wmbr.org/mailman/listinfo/wmbr-cares). Interested in sending us a message or having your organization interviewed? Email us at wmbr-cares at mit dot edu.
+- title: "What is WMBR?"
+  content: Learn more [here](https://wmbr.org/www/info). 
+
+layout: base-layout.liquid
+---
+{% for section in sections %}
+<div class="bg-gradient-to-r from-yellow-400 to-yellow-300 p-2 mt-4 md:border border-gray-300 shadow">
+  <h3 class="text-center text-lg font-medium">{{ section.title }}</h3>
+</div>
+<div class="flex justify-center pt-4">
+  <div class="prose">
+    {{ section.content | markdown }}
+  </div>
+</div>
+{% endfor %}
+
+
+</div>
