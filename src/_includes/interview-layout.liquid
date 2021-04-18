@@ -1,15 +1,22 @@
 ---
 layout: base-layout.liquid
 ---
-<div class="bg-gradient-to-r from-yellow-400 to-yellow-300 p-6 mt-4 border border-gray-300 shadow">
-  <h1 class="text-xl text-center font-medium">{{ title }} //
+<div class="bg-gradient-to-r from-yellow-400 to-yellow-300 dark:from-gray-800 dark:to-gray-700 p-6 mt-4 border border-gray-300 dark:border-gray-500 shadow">
+  <h1 class="text-xl text-center font-medium">
+    {{ title }}{% if subtitle %}: {{ subtitle }}{% endif %} //
+    <br class="md:hidden">
     <a href={{ collections.organization | orgUrl: organization | url }} class="hover:text-gray-400 underline">{{ organization }}</a></h1>
-      <br>
-      <audio controls class="w-full focus:outline-none">
-        <source src="{{ audio-file }}" type="audio/wav">
-      Your browser does not support the audio element.
-      </audio>
+  <br>
+  <audio controls class="w-full focus:outline-none">
+    <source src="{{ audio-file | url }}" type="audio/wav">
+  Your browser does not support the audio element.
+  </audio>
 </div>
 <div class="text-left text-lg p-6">
   {{ content }}
+  production ~ {{ producer }}
+  {% if music %}
+    <br>
+    music ~ {{music}}
+  {% endif %}
 </div>

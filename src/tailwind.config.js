@@ -1,14 +1,9 @@
 module.exports = {
-  purge: {
-    content: ["./src/**/*.liquid", "./src/**/*.md"],
-    options: {
-      safelist: []
-    },
-  },
+  darkMode: 'class',
   theme: {
     extend: {
       screens: {
-        "dark-mode": {"raw": "(prefers-color-scheme: dark)"},
+        dark: { raw: '(prefers-color-scheme: dark)' }
       },
       typography: (theme) => {
         return {

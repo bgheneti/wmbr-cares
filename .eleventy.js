@@ -21,6 +21,11 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection("allMedia", function(collectionApi) {
     return collectionApi.getFilteredByTag("interview").concat(collectionApi.getFilteredByTag("PSA"));
   });
+  eleventyConfig.addCollection("organizationByDate", function(collection) {
+    return collection.getFilteredByTag("organization").sort(function(a, b) {
+        return ('' + a.data.title).localeCompare(b.data.title);
+    });
+  });
   eleventyConfig.addFilter("orgUrl", function(organizations, name) {
     return organizations.filter(x => x.data.title == name)[0].url;
   });

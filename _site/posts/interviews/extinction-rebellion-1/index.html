@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/wmbr-cares-demo/css/main.css">
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
   <title>WMBR Cares</title>
 </head>
 
-<body class="flex flex-col antialiased min-h-screen bg-gray-100 dark-mode:bg-gray-900 md:w-5/6 m-auto">
+<body class="flex flex-col antialiased min-h-screen bg-gray-100 dark:bg-gray-900 md:w-5/6 m-auto dark:text-gray-300 text-gray-900">
         <header>
-        <div class="w-full bg-white md:bg-transparent text-gray-700 dark-mode:text-gray-800 dark-mode:bg-gray-800 border-b-4 md:border-0">
+        <div class="w-full bg-white md:bg-transparent dark:bg-gray-800 dark:border-gray-500 border-b-4 md:border-0">
             <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
                 <div class="flex flex-row items-center justify-between p-4">
-                    <a href="/" class="text-lg font-semibold tracking-widest text-gray-900 rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">WMBR Cares</a>
+                  <a href="/wmbr-cares-demo/" class="text-lg font-semibold tracking-widest rounded-lg focus:outline-none focus:shadow-outline">WMBR Cares</a>
                     <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
                         <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
                             <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
@@ -23,27 +23,27 @@
                 </div>
                 <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
                   
-                      <a class="transition px-4 py-2 mt-2 font-semibold text-sm font-semibold focus:outline-none focus:shadow-outline rounded-lg focus:bg-yellow-100 hover:bg-yellow-100 hover:shadow focus:shadow md:mt-0 md:ml-4
+                      <a class="transition px-4 py-2 mt-2 font-semibold text-sm font-semibold focus:outline-none focus:shadow-outline rounded-lg focus:bg-yellow-100 dark:focus:bg-gray-600 hover:bg-yellow-100 dark:hover:bg-gray-600 hover:shadow focus:shadow md:mt-0 md:ml-4
                           
-                              text-gray-900 bg-yellow-300 shadow border-gray-300
+                              text-gray-900 bg-yellow-300 shadow border-gray-300 dark:bg-gray-500
                           "
-                          href="/">
+                          href="/wmbr-cares-demo/">
                           Interviews
                       </a>
                   
-                      <a class="transition px-4 py-2 mt-2 font-semibold text-sm font-semibold focus:outline-none focus:shadow-outline rounded-lg focus:bg-yellow-100 hover:bg-yellow-100 hover:shadow focus:shadow md:mt-0 md:ml-4
+                      <a class="transition px-4 py-2 mt-2 font-semibold text-sm font-semibold focus:outline-none focus:shadow-outline rounded-lg focus:bg-yellow-100 dark:focus:bg-gray-600 hover:bg-yellow-100 dark:hover:bg-gray-600 hover:shadow focus:shadow md:mt-0 md:ml-4
                           
-                              bg-transparent text-gray-900 
+                              bg-transparent light:text-gray-900 
                           "
-                          href="/organizations/">
+                          href="/wmbr-cares-demo/organizations/">
                           Organizations
                       </a>
                   
-                      <a class="transition px-4 py-2 mt-2 font-semibold text-sm font-semibold focus:outline-none focus:shadow-outline rounded-lg focus:bg-yellow-100 hover:bg-yellow-100 hover:shadow focus:shadow md:mt-0 md:ml-4
+                      <a class="transition px-4 py-2 mt-2 font-semibold text-sm font-semibold focus:outline-none focus:shadow-outline rounded-lg focus:bg-yellow-100 dark:focus:bg-gray-600 hover:bg-yellow-100 dark:hover:bg-gray-600 hover:shadow focus:shadow md:mt-0 md:ml-4
                           
-                              bg-transparent text-gray-900 
+                              bg-transparent light:text-gray-900 
                           "
-                          href="/about/">
+                          href="/wmbr-cares-demo/about/">
                           About
                       </a>
                   
@@ -52,22 +52,26 @@
         </div>
         </header>
         <main class="flex-grow"> 
-            <div class="bg-gradient-to-r from-yellow-400 to-yellow-300 p-6 mt-4 border border-gray-300 shadow">
-  <h1 class="text-xl text-center font-medium">Addressing the Climate Crisis: Laks Indrakaran interviews Rachel Myers //
-    <a href=/posts/organizations/extinction-rebellion/ class="hover:text-gray-400 underline">Extinction Rebellion Youth Boston</a></h1>
-      <br>
-      <audio controls class="w-full focus:outline-none">
-        <source src="/audio/interviews/extinction-rebellion-interview-1.wav" type="audio/wav">
-      Your browser does not support the audio element.
-      </audio>
+            <div class="bg-gradient-to-r from-yellow-400 to-yellow-300 dark:from-gray-800 dark:to-gray-700 p-6 mt-4 border border-gray-300 dark:border-gray-500 shadow">
+  <h1 class="text-xl text-center font-medium">
+    Addressing the Climate Crisis //
+    <br class="md:hidden">
+    <a href=/wmbr-cares-demo/posts/organizations/extinction-rebellion/ class="hover:text-gray-400 underline">Extinction Rebellion Youth Boston</a></h1>
+  <br>
+  <audio controls class="w-full focus:outline-none">
+    <source src="/wmbr-cares-demo/audio/interviews/extinction-rebellion-interview-1.mp3" type="audio/wav">
+  Your browser does not support the audio element.
+  </audio>
 </div>
 <div class="text-left text-lg p-6">
+  
+  production ~ Laks Indrakara
   
 </div>
 
         </main> 
         <footer class="w-full text-center">
-          <div class="bg-white md:bg-transparent text-gray-900 font-medium p-2 border-t-4 mt-4 md:border-0">
+          <div class="bg-white dark:bg-gray-800 md:bg-transparent font-medium p-2 border-t-4 mt-4 md:border-0 dark:border-gray-600">
             <a href="http://wmbr.org" class="hover:text-yellow-400 underline">WMBR.org</a><br class="md:hidden"><bold class="hidden md:contents font-black"> //</bold> © WMBR is a registered servicemark of the Technology Broadcasting Corporation</footer> 
           </div> 
     </body> 

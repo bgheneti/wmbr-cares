@@ -3,21 +3,26 @@ layout: base-layout.liquid
 show_date: true
 show_tags: false
 ---
-<div class="grid md:grid-cols-2 grid-cols-1 justify-items-center mt-4 gap-4 m-auto">
+<div class="grid md:grid-cols-2 grid-cols-1 justify-items-center mt-4 gap-4 m-auto dark:text-white">
   {% for post in posts %}
-  <div class="transition duration-100 bg-white rounded shadow border text-center w-full hover:bg-yellow-100 transform md:hover:-translate-y-1 focus:bg-yellow-100">
+  <div class="transition duration-100 bg-white dark:bg-gray-800 dark:border-gray-700 rounded shadow border text-center w-full hover:bg-yellow-100 dark:hover:bg-gray-700 transform md:hover:-translate-y-1 focus:bg-yellow-100 dark:focus:bg-gray-800">
     <a class="w-full h-full p-6" href="{{ post.url | url }}">
-    <h2 class="text-xl font=bold mb-4 mt-0 p-2">
+    <h2 class="text-xl mt-0 p-2">
       {{ post.data.title }}
     </h2>
-    <h3 class="text-l">
-      {% if show_date %}
+    <h2 class="text-l mt-0 text-gray-600"> 
+      {% if post.data.subtitle %}
+        {{ post.data.subtitle }}
+      {% endif %}
+    </h2>
+    <h3 class="text-l mt-2">
+    {{ post.data.organization }}
+    {% if show_date %}
+      <b>·</b> 
       {{ post.date | readableDate }}
     {% endif %}
-    {% if show_date and show_tags %}
-      <b>·</b> 
-    {% endif %}
     {% if show_tags %}
+      <b>·</b> 
       {{ post.data.tags[0] }}
     {% endif %}
     </h3>
